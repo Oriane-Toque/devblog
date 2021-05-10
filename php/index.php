@@ -46,6 +46,7 @@ if ($pageToDisplay === 'home') {
     require __DIR__ . '/inc/data.php';
     $articlesList = $dataArticlesList;
     $categoriesList = $dataCategoriesList;
+    $authorsList = $dataAuthorsList;
 }
 // ------------------
 // Page Article
@@ -56,6 +57,7 @@ else if ($pageToDisplay === 'article') {
     require __DIR__ . '/inc/data.php';
     $articlesList = $dataArticlesList;
     $categoriesList = $dataCategoriesList;
+    $authorsList = $dataAuthorsList;
     // On souhaite récupérer uniquement les données de l'article
     // à afficher
     $articleId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);

@@ -55,13 +55,9 @@
         <div class="card">
           <h3 class="card-header">Auteurs</h3>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="author.php">Maxime</a></li>
-            <li class="list-group-item"><a href="author.php">Anthony</a></li>
-            <li class="list-group-item"><a href="author.php">Alexandre</a></li>
-            <li class="list-group-item"><a href="author.php">Dario</a></li>
-            <li class="list-group-item"><a href="author.php">Julie</a></li>
-            <li class="list-group-item"><a href="author.php">Lucie</a></li>
-            <li class="list-group-item"><a href="author.php">Xavier</a></li>
+          <?php foreach ($authorsList as $authorId => $authorName) : ?>
+            <li class="list-group-item"><?= $authorName; ?></li>
+          <?php endforeach; ?>
           </ul>
         </div>
 
