@@ -14,8 +14,8 @@
             <h2 class="card-title"><a href="index.php?page=article&id=<?= $articleId ?>"><?= $articleObject->title; ?></a></h2>
             <p class="card-text"><?= $articleObject->content; ?></p>
             <p class="infos">
-              Posté par <a href="#" class="card-link"><?= $articleObject->author; ?></a> le <time datetime="<?= $articleObject->date; ?>"><?= $articleObject->date; ?></time> dans <a href="#"
-                class="card-link">#<?= $articleObject->category; ?></a>
+              Posté par <a href="#" class="card-link"><?= $articleObject->author->title; ?></a> le <time datetime="<?= $articleObject->date; ?>"><?= $articleObject->date; ?></time> dans <a href="#"
+                class="card-link">#<?= $articleObject->category->title; ?></a>
             </p>
           </div>
         </article>
