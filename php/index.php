@@ -12,6 +12,8 @@
 // ===========================================================
 
 require __DIR__ . '/inc/classes/Article.php';
+require __DIR__ . '/inc/classes/Category.php';
+require __DIR__ . '/inc/classes/Author.php';
 
 // ===========================================================
 // Récupération des données nécessaires à toutes les pages

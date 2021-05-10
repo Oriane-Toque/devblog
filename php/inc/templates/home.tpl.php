@@ -46,7 +46,7 @@
           <h3 class="card-header">Catégories</h3>
           <ul class="list-group list-group-flush">
           <?php foreach($categoriesList as $categoryId => $categoryObject): ?>
-            <li class="list-group-item"><a href="index.php?page=category&id=<?= $categoryId; ?>"><?= $categoryObject; ?></a></li>
+            <li class="list-group-item"><a href="index.php?page=category&id=<?= $categoryId; ?>"><?= $categoryObject->title; ?></a></li>
           <?php endforeach; ?>
           </ul>
         </div>
@@ -55,8 +55,8 @@
         <div class="card">
           <h3 class="card-header">Auteurs</h3>
           <ul class="list-group list-group-flush">
-          <?php foreach ($authorsList as $authorId => $authorName) : ?>
-            <li class="list-group-item"><a href="index.php?page=author&id=<?= $authorId; ?>"><?= $authorName; ?></a></li>
+          <?php foreach ($authorsList as $authorId => $authorObject) : ?>
+            <li class="list-group-item"><a href="index.php?page=author&id=<?= $authorId; ?>"><?= $authorObject->title; ?></a></li>
           <?php endforeach; ?>
           </ul>
         </div>
