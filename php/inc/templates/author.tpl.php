@@ -6,7 +6,7 @@
 
     foreach($articlesList as $articleId => $articleObject) {
 
-        if($authorToDisplay->title == $articleObject->author->title) {
+        if($authorToDisplay->title == $articleObject->author) {
  
         $articlesOfAuthor[] = $articleObject;
     }
@@ -29,8 +29,8 @@
         <article class="card">
             <h2 class="card-title"><?= $articleObject->title; ?></h2>
             <p class="infos">
-                Posté par <a href="#" class="card-link"><?= $articleObject->author->title; ?></a> le <time datetime="<?= $articleObject->date; ?>"><?= $articleObject->date; ?></time> dans <a href="#"
-                    class="card-link">#<?= $articleObject->category->title; ?></a>
+                Posté par <a href="#" class="card-link"><?= $articleObject->author; ?></a> le <time datetime="<?= $articleObject->date; ?>"><?= $articleObject->date; ?></time> dans <a href="#"
+                    class="card-link">#<?= $articleObject->category; ?></a>
             </p>
             <p class="card-text"><?= $articleObject->content; ?></p>
             </div>

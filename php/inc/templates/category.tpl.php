@@ -12,7 +12,7 @@
         /* LE BUT ÉTANT DE COMPARER LA VALEUR CATEGORIE DE CHAQUE OBJET CONTENU DANS
         articlesList avec la catégorie qu'on désire afficher */
         // si la catégorie d'un article vaut la catégorie qu'on désire afficher
-        if($categoryToDisplay->title == $articleObject->category->title) {
+        if($categoryToDisplay->title == $articleObject->category) {
         // si la condition est vraie
         // alors ajouter à mon tableau l'objet article
         $articlesOfCategory[] = $articleObject;
@@ -35,8 +35,8 @@
         <article class="card">
             <h2 class="card-title"><?= $articleObject->title; ?></h2>
             <p class="infos">
-                Posté par <a href="#" class="card-link"><?= $articleObject->author->title; ?></a> le <time datetime="<?= $articleObject->date; ?>"><?= $articleObject->date; ?></time> dans <a href="#"
-                    class="card-link">#<?= $articleObject->category->title; ?></a>
+                Posté par <a href="#" class="card-link"><?= $articleObject->author; ?></a> le <time datetime="<?= $articleObject->date; ?>"><?= $articleObject->date; ?></time> dans <a href="#"
+                    class="card-link">#<?= $articleObject->category; ?></a>
             </p>
             <p class="card-text"><?= $articleObject->content; ?></p>
             </div>
