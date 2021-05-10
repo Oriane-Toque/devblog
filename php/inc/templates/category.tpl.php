@@ -1,3 +1,3 @@
 <div class="container">
-    <h1>Page catégorie</h1>
+    <h1><?= $categoryToDisplay->title; ?></h1>
 </div>
