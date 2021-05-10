@@ -45,10 +45,9 @@
         <div class="card">
           <h3 class="card-header">Catégories</h3>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a href="category.php">TeamBack</a></li>
-            <li class="list-group-item"><a href="category.php">TeamFront</a></li>
-            <li class="list-group-item"><a href="category.php">Collaboration</a></li>
-            <li class="list-group-item"><a href="category.php">Ma Vie De Dev</a></li>
+          <?php foreach($categoriesList as $categoryId => $categoryObject): ?>
+            <li class="list-group-item"><a href="category.php"><?= $categoryObject; ?></a></li>
+          <?php endforeach; ?>
           </ul>
         </div>
 

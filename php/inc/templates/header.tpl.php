@@ -46,18 +46,9 @@
       <!-- Cette partie va automatique être masquée en version mobile -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">TeamBack</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="templates/category.tpl.php">TeamFront</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="templates/category.tpl.php">Collaboration</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="templates/category.tpl.php">Ma Vie De Dev</a>
-          </li>
+        <?php foreach($categoriesList as $categoryId => $categoryObject): ?>
+          <li class="nav-item"><a class="nav-link" href="templates/category.tpl.php"><?= $categoryObject; ?></a></li>
+        <?php endforeach; ?>
         </ul>
       </div>
     </nav>
