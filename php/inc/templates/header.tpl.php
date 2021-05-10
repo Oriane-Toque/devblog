@@ -47,7 +47,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ">
         <?php foreach($categoriesList as $categoryId => $categoryObject): ?>
-          <li class="nav-item"><a class="nav-link" href="templates/category.tpl.php"><?= $categoryObject; ?></a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php?page=category&id=<?= $categoryId; ?>"><?= $categoryObject; ?></a></li>
         <?php endforeach; ?>
         </ul>
       </div>

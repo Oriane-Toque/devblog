@@ -77,13 +77,16 @@ else if ($pageToDisplay === 'article') {
 // Page Auteur
 // ------------------
 else if ($pageToDisplay === 'author') {
-    
+    require __DIR__ . '/inc/data.php';
+    $authorsList = $dataAuthorsList;
+    $categoriesList = $dataCategoriesList;
 }
 // ------------------
 // Page Catégorie
 // ------------------
 else if ($pageToDisplay === 'category') {
-    
+    require __DIR__ . '/inc/data.php';
+    $categoriesList = $dataCategoriesList;
 }
 
 // ===========================================================
