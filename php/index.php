@@ -82,6 +82,20 @@ else if ($pageToDisplay === 'author') {
     require __DIR__ . '/inc/data.php';
     $authorsList = $dataAuthorsList;
     $categoriesList = $dataCategoriesList;
+    $articlesList = $dataArticlesList;
+
+    $authorId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+    // filter_input renvoie null si la paramètre n'existe pas
+    // et false si le filtre de validation échoue
+    // On s'assure donc de ne pas tomber ni sur false, ni sur null
+    if ($authorId !== false && $authorId !== null) {
+        $authorToDisplay = $authorsList[$authorId];
+    } 
+    // Si l'id n'est pas fourni, on affiche la page d'accueil
+    // plutôt que d'avoir un message d'erreur
+    else {
+        $pageToDisplay = 'home';
+    }
 }
 // ------------------
 // Page Catégorie
@@ -89,6 +103,7 @@ else if ($pageToDisplay === 'author') {
 else if ($pageToDisplay === 'category') {
     require __DIR__ . '/inc/data.php';
     $categoriesList = $dataCategoriesList;
+    $articlesList = $dataArticlesList;
 
     $categoryId = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
     // filter_input renvoie null si la paramètre n'existe pas
