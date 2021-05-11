@@ -1,25 +1,6 @@
 <div class="container">
     <h1><?= $categoryToDisplay->title; ?></h1>
 
-<?php
-    /* INITIALISATION D'UN TABLEAU VIDE QUI VA RÉCUPERER LES OBJETS ARTICLES SELON
-    LA CATEGORIE A AFFICHER */
-    $articlesOfCategory = [];
-
-    /* On boucle sur le tableau articlesList afin d'avoir accès aux objets articles */
-    foreach($articlesList as $articleId => $articleObject) {
-
-        /* LE BUT ÉTANT DE COMPARER LA VALEUR CATEGORIE DE CHAQUE OBJET CONTENU DANS
-        articlesList avec la catégorie qu'on désire afficher */
-        // si la catégorie d'un article vaut la catégorie qu'on désire afficher
-        if($categoryToDisplay->title == $articleObject->category) {
-        // si la condition est vraie
-        // alors ajouter à mon tableau l'objet article
-        $articlesOfCategory[] = $articleObject;
-    }
-}
-
-?>
     <!-- Je crée une nouvelle ligne dans ma grille virtuelle: https://getbootstrap.com/docs/4.1/layout/grid/-->
     <div class="row">
 

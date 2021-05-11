@@ -1,19 +1,6 @@
 <div class="container">
     <h1><?= $authorToDisplay->title; ?></h1>
 
-    <?php
-    $articlesOfAuthor = [];
-
-    foreach($articlesList as $articleId => $articleObject) {
-
-        if($authorToDisplay->title == $articleObject->author) {
- 
-        $articlesOfAuthor[] = $articleObject;
-    }
-}
-
-?>
-
     <!-- Je crée une nouvelle ligne dans ma grille virtuelle: https://getbootstrap.com/docs/4.1/layout/grid/-->
     <div class="row">
 
