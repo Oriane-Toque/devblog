@@ -20,7 +20,6 @@
                     class="card-link"><?= getHashtag($articleObject->category); ?></a>
             </p>
             <p class="card-text"><?= $articleObject->content; ?></p>
-            </div>
         </article>
         <?php endforeach; ?>
 
