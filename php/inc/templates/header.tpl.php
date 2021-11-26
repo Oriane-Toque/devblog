@@ -17,7 +17,7 @@
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
   <!-- Ma feuille de style pour mon blog -->
-  <link rel="stylesheet" href="../integration-html-css/css/blog.css">
+  <link rel="stylesheet" href="./integration-html-css/css/blog.css">
 
   <title>O'Blog</title>
 </head>
